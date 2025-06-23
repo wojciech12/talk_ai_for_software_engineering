@@ -1,10 +1,6 @@
 {
   "permissions": {
-    "allow": [
-      "Bash(git:*)"
-    ],
-    "deny": [
-      "Webfetch"
-    ]
+    "allow": ["Bash(git:*)"],
+    "deny": ["Webfetch"]
   }
 }
