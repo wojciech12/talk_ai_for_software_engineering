@@ -13,6 +13,10 @@ MCP:
 
 - xyz
 
+Communities:
+
+- reddit :D
+
 ## Resources
 
 Antropic - great to know:
@@ -22,3 +26,6 @@ Antropic - great to know:
   - https://docs.anthropic.com/en/docs/claude-code/memory
   - https://docs.anthropic.com/en/docs/claude-code/common-workflows
 
+## Parking lot
+
+- gradio_api
