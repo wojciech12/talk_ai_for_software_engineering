@@ -29,7 +29,7 @@ Antropic - great to know:
 - Getting started:
   - https://docs.anthropic.com/en/docs/claude-code/memory
   - https://docs.anthropic.com/en/docs/claude-code/common-workflows
-  - https://docs.anthropic.com/en/docs/claude-code/common-workflows#use-extended-thinking
+  - https://www.anthropic.com/engineering/claude-code-best-practices
 
 Github Copilot:
 
@@ -54,9 +54,14 @@ Instructions/rules:
 
 Prompts:
 
-- deep thinking modes
+- deep thinking modes (for example, [claude](https://docs.anthropic.com/en/docs/claude-code/common-workflows#use-extended-thinking))
 - magic formulas: "be consise, focus on clarity", "you are senior XYZ", ...
 - https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat (good start)
+
+Reducing Hallucinations:
+
+- cut the space (specify library, give an example)
+- TBA 
 
 ## Parking lot
 
