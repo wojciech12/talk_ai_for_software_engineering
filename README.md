@@ -57,6 +57,7 @@ Prompts:
 - deep thinking modes (for example, [claude](https://docs.anthropic.com/en/docs/claude-code/common-workflows#use-extended-thinking))
 - magic formulas: "be consise, focus on clarity", "you are senior XYZ", ...
 - https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat (good start)
+- https://docs.anthropic.com/en/resources/prompt-library/library
 
 Reducing Hallucinations:
 
