@@ -63,6 +63,7 @@ Reducing Hallucinations:
 
 - cut the space (specify library, give an example)
 - TBA
+- https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations
 
 Security:
 
