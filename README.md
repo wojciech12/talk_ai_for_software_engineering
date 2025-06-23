@@ -1,4 +1,4 @@
-# Best Practices for Using AI in Software Development
+# Best Practices for Using AI in Software Development - Notes
 
 Tools / IDE:
 
@@ -62,7 +62,11 @@ Prompts:
 Reducing Hallucinations:
 
 - cut the space (specify library, give an example)
-- TBA 
+- TBA
+
+Security:
+
+- ignore file - every tool has its own, for example, `.claudeignore` for Claude Code
 
 ## Parking lot
 

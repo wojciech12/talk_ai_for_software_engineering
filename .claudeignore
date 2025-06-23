@@ -1,0 +1,22 @@
+# Environment and secrets
+.env*
+*.key
+*.pem
+*secret*
+*password*
+
+# Build artifacts
+node_modules/
+dist/
+build/
+*.log
+
+# IDE and OS files
+.DS_Store
+.vscode/settings.json
+.idea/
+
+# Large files that add no context
+*.pdf
+*.zip
+*.tar.gz
