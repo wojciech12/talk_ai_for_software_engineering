@@ -24,12 +24,8 @@ The slides use Marp (https://marp.app/) for markdown-to-slide conversion with th
 
 ## MCP Configuration
 
-This repository includes an MCP configuration file (`.claude/mcp-config.json`) with the following servers:
+This repository includes an MCP configuration file (`.mcp.json`) with the following servers:
 - **Context7** - Connected via SSE transport at `https://mcp.context7.com/sse`
-
-To use this configuration:
-1. Add the server using: `claude mcp add --transport sse context7 https://mcp.context7.com/sse`
-2. Or reference the `.claude/mcp-config.json` file for programmatic setup
 
 ## Content Focus Areas
 
