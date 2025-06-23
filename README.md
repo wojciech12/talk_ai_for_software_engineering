@@ -4,10 +4,14 @@ Tools / IDE:
 
 - Claude Code
 - Github Copilot
+- Cline/Roo/Kilo
+
+Out of scope:
+
 - Cursor and Windsurf
-- Cline/Roo/Kilo 
+- Cline/Roo/Kilo
 - Zed
-- Jetbrains AI/Junie (I have never used this one)
+- Jetbrains AI/Junie (out of scope)
 
 MCP:
 
@@ -25,6 +29,32 @@ Antropic - great to know:
 - Getting started:
   - https://docs.anthropic.com/en/docs/claude-code/memory
   - https://docs.anthropic.com/en/docs/claude-code/common-workflows
+  - https://docs.anthropic.com/en/docs/claude-code/common-workflows#use-extended-thinking
+
+Github Copilot:
+
+- Ask Github to create the instructions, etc.
+- You can link, e.g., your CLAUDE.md to your github copilot configs
+- ALWAYS use agentic mode
+- https://code.visualstudio.com/docs/copilot/copilot-customization
+
+Cline (WIP):
+
+- https://docs.cline.bot/prompting/cline-memory-bank
+
+Model selection:
+
+- https://docs.cline.bot/getting-started/model-selection-guide (a good summary)
+
+Instructions/rules:
+
+- Instructions should reflect your project phase, e.g., at the begining - one file, minimum tests,... the more mature project, the more strict the instructions
+- Code examples, concrete, ...
+- Example: https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/refs/heads/main/CLAUDE.md
+
+Prompts:
+
+- deep thinking modees
 
 ## Parking lot
 
