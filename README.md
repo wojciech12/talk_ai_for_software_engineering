@@ -54,7 +54,9 @@ Instructions/rules:
 
 Prompts:
 
-- deep thinking modees
+- deep thinking modes
+- magic formulas: "be consise, focus on clarity", "you are senior XYZ", ...
+- https://docs.github.com/en/copilot/using-github-copilot/copilot-chat/prompt-engineering-for-copilot-chat (good start)
 
 ## Parking lot
 
