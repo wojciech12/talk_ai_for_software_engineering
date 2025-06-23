@@ -17,6 +17,7 @@ This is a presentation repository containing materials about AI tools for softwa
 ## Working with Presentations
 
 The slides use Marp (https://marp.app/) for markdown-to-slide conversion with the Gaia theme. The slides.md file contains:
+
 - Marp configuration in YAML frontmatter
 - Gaia theme with custom styling
 - Slide separators using `---`
@@ -25,11 +26,13 @@ The slides use Marp (https://marp.app/) for markdown-to-slide conversion with th
 ## MCP Configuration
 
 This repository includes an MCP configuration file (`.mcp.json`) with the following servers:
+
 - **Context7** - Connected via SSE transport at `https://mcp.context7.com/sse`
 
 ## Content Focus Areas
 
 Based on the README, this repository covers:
+
 - AI development tools (Claude Code, GitHub Copilot, Cursor, Windsurf, etc.)
 - MCP (Model Context Protocol)
 - Community resources
