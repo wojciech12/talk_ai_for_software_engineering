@@ -1,0 +1,12 @@
+# Security-first git configuration
+# Prevent accidental secret commits
+
+# Force text handling for security scanning
+*.env text
+*.key text
+*.pem text
+*.cert text
+secrets/* text
+
+# Mandatory security hooks
+* filter=git-secrets
