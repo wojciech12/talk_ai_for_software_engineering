@@ -1,21 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import './HelloWorld.css';
 
 /**
- * HelloWorld component demonstrating Claude Code best practices
- * Features:
- * - Functional component with hooks
- * - PropTypes for type validation
- * - API integration with error handling
- * - Loading states
- * - Responsive design
+ * HelloWorld component demonstrating Claude Code PRODUCTION best practices
+ * Performance Features:
+ * - React.memo for render optimization
+ * - useCallback for event handler memoization
+ * - useMemo for expensive calculations
+ * - Proper dependency arrays
+ * - Error boundaries compatible
+ * 
+ * Functional Features:
+ * - API integration with comprehensive error handling
+ * - Loading states with user feedback
+ * - Responsive design with accessibility
+ * - Fallback mechanisms for resilience
  * 
  * @param {Object} props - Component props
  * @param {string} [props.apiEndpoint='/api/hello'] - API endpoint to fetch message
  * @param {string} [props.fallbackMessage='Hello, World!'] - Fallback message if API fails
  */
-const HelloWorld = ({ 
+const HelloWorld = React.memo(({ 
   apiEndpoint = '/api/hello', 
   fallbackMessage = 'Hello, World!' 
 }) => {
@@ -56,16 +62,27 @@ const HelloWorld = ({
     fetchMessage();
   }, [apiEndpoint, fallbackMessage, requestCount]);
 
-  // Event handlers
-  const handleRefresh = () => {
-    setRequestCount(prev => prev + 1);
-  };
+  // Memoized calculations (prevent unnecessary recalculations)
+  const connectionStatus = useMemo(() => {
+    if (error) return 'Using fallback';
+    if (isLoading) return 'Connecting...';
+    return 'Connected to API';
+  }, [error, isLoading]);
 
-  const handleReset = () => {
+  const displayMessage = useMemo(() => {
+    return message || fallbackMessage;
+  }, [message, fallbackMessage]);
+
+  // Event handlers (memoized to prevent child re-renders)
+  const handleRefresh = useCallback(() => {
+    setRequestCount(prev => prev + 1);
+  }, []);
+
+  const handleReset = useCallback(() => {
     setMessage(fallbackMessage);
     setError(null);
     setIsLoading(false);
-  };
+  }, [fallbackMessage]);
 
   // Render loading state
   if (isLoading) {
@@ -81,7 +98,7 @@ const HelloWorld = ({
   return (
     <div className="hello-world">
       <div className="message-container">
-        <h2 className="message">{message}</h2>
+        <h2 className="message">{displayMessage}</h2>
         
         {error && (
           <div className="error-banner">
@@ -92,7 +109,7 @@ const HelloWorld = ({
         
         <div className="stats">
           <p>Requests made: {requestCount}</p>
-          <p>Status: {error ? 'Using fallback' : 'Connected to API'}</p>
+          <p>Status: {connectionStatus}</p>
         </div>
       </div>
       
@@ -115,7 +132,10 @@ const HelloWorld = ({
       </div>
     </div>
   );
-};
+});
+
+// Display name for debugging (helpful when using React.memo)
+HelloWorld.displayName = 'HelloWorld';
 
 HelloWorld.propTypes = {
   apiEndpoint: PropTypes.string,
