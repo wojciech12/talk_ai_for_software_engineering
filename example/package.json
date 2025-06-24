@@ -1,0 +1,133 @@
+{
+  "name": "hello-world-best-practices",
+  "version": "1.0.0",
+  "description": "Hello World application demonstrating Claude Code best practices",
+  "main": "backend/server.js",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "react-scripts start",
+    "dev:backend": "nodemon backend/server.js",
+    "build": "react-scripts build",
+    "start": "node backend/server.js",
+    "preview": "serve -s build -l 3000",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "test:full": "npm run test:coverage && npm run test:backend",
+    "test:backend": "jest backend/ --testEnvironment=node",
+    "lint": "eslint src/ backend/ --ext .js,.jsx",
+    "lint:fix": "eslint src/ backend/ --ext .js,.jsx --fix",
+    "format": "prettier --check src/ backend/",
+    "format:fix": "prettier --write src/ backend/",
+    "type-check": "echo 'Type checking not implemented (JavaScript project)'",
+    "clean": "rm -rf build node_modules/.cache",
+    "audit": "npm audit --audit-level moderate"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.1",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3",
+    "eslint": "^8.49.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.0.3",
+    "serve": "^14.2.1",
+    "jest": "^27.5.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.8.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/hello-world-best-practices"
+  },
+  "keywords": [
+    "react",
+    "node.js",
+    "express",
+    "hello-world",
+    "claude-code",
+    "best-practices",
+    "demo",
+    "tutorial"
+  ],
+  "author": "Claude Code Demo",
+  "license": "MIT",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "backend/**/*.js",
+      "!src/index.js",
+      "!src/reportWebVitals.js",
+      "!**/node_modules/**",
+      "!**/build/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "nodemonConfig": {
+    "watch": ["backend/"],
+    "ext": "js,json",
+    "ignore": ["node_modules/", "build/"],
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+}

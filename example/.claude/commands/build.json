@@ -1,0 +1,48 @@
+{
+  "name": "build",
+  "description": "Build production version and validate deployment readiness",
+  "command": "npm run build && npm run start &",
+  "when_to_use": "Before deployment, during CI/CD pipeline, or when testing production build",
+  "prerequisites": [
+    "All tests passing",
+    "No linting errors",
+    "Environment variables configured"
+  ],
+  "expected_output": "Optimized build in /build directory, server starts successfully",
+  "build_process": {
+    "frontend": {
+      "command": "npm run build",
+      "output": "build/ directory with optimized React app",
+      "checks": [
+        "Bundle size < 1MB compressed",
+        "No build warnings or errors",
+        "All assets properly hashed"
+      ]
+    },
+    "backend": {
+      "command": "npm run start",
+      "output": "Production server running on configured port",
+      "checks": [
+        "Server starts without errors",
+        "Health endpoint responds",
+        "API endpoints functional"
+      ]
+    }
+  },
+  "validation_steps": [
+    "Check build output for warnings",
+    "Verify bundle size requirements",
+    "Test API endpoints manually",
+    "Validate environment variable usage",
+    "Confirm security headers present"
+  ],
+  "deployment_checklist": [
+    "Environment variables set",
+    "Database connections configured",
+    "Monitoring/logging enabled",
+    "SSL certificates valid",
+    "CDN/static assets configured"
+  ],
+  "rollback_plan": "Keep previous build available, have database rollback scripts ready",
+  "monitoring": "Watch server logs, error rates, response times after deployment"
+}

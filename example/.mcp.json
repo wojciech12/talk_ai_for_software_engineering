@@ -1,0 +1,89 @@
+{
+  "description": "MCP configuration for Hello World best practices demo",
+  "version": "1.0.0",
+  "servers": {
+    "context7": {
+      "command": "sse",
+      "args": ["https://mcp.context7.com/sse"],
+      "description": "Context7 server for enhanced documentation and library support"
+    }
+  },
+  "tools": {
+    "development": {
+      "description": "Development workflow tools",
+      "enabled": true,
+      "config": {
+        "auto_format": true,
+        "run_tests_on_save": false,
+        "lint_on_save": true
+      }
+    },
+    "documentation": {
+      "description": "Documentation generation and maintenance",
+      "enabled": true,
+      "config": {
+        "auto_update_readme": false,
+        "generate_api_docs": true,
+        "maintain_changelog": false
+      }
+    }
+  },
+  "integrations": {
+    "vscode": {
+      "enabled": true,
+      "settings": {
+        "format_on_save": true,
+        "show_diagnostics": true,
+        "auto_import": true
+      }
+    },
+    "git": {
+      "enabled": true,
+      "hooks": {
+        "pre_commit": ["lint", "test"],
+        "pre_push": ["test:full"]
+      }
+    }
+  },
+  "project_settings": {
+    "language": "javascript",
+    "framework": "react",
+    "backend": "node.js",
+    "test_framework": "jest",
+    "package_manager": "npm",
+    "code_style": {
+      "formatter": "prettier",
+      "linter": "eslint",
+      "max_line_length": 100,
+      "tab_size": 2,
+      "use_tabs": false
+    }
+  },
+  "claude_instructions": {
+    "primary_file": "CLAUDE.md",
+    "memory_directory": ".claude/memory",
+    "commands_directory": ".claude/commands",
+    "auto_context_refresh": true,
+    "max_context_files": 10,
+    "preferred_response_length": "concise",
+    "include_file_references": true
+  },
+  "security": {
+    "exclude_patterns": [
+      "*.env*",
+      "*.key",
+      "*.pem",
+      "*.cert",
+      "secrets/*",
+      "credentials/*"
+    ],
+    "sanitize_logs": true,
+    "mask_sensitive_data": true
+  },
+  "performance": {
+    "max_file_size_mb": 1,
+    "max_context_length": 100000,
+    "cache_duration_minutes": 30,
+    "parallel_processing": true
+  }
+}

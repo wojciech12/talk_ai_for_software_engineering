@@ -1,0 +1,133 @@
+# .claudeignore - Exclude files from Claude Code context
+# Optimized according to INSTRUCTIONS.md priority order
+
+# Large binary files (Priority 1)
+*.pdf
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+*.exe
+*.msi
+*.deb
+*.rpm
+
+# Images and media (generally not needed for code context)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.webp
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.mp3
+*.wav
+*.flac
+
+# Generated/compiled code (Priority 2)
+build/
+dist/
+out/
+target/
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+
+# Dependencies (Priority 3)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE and editor specific files (Priority 4)
+.vscode/
+.idea/
+.sublime-project
+.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Temporary files (Priority 5)
+tmp/
+temp/
+*.tmp
+*.temp
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Documentation builds (keep source, ignore generated)
+docs/_build/
+docs/.doctrees/
+site/
+
+# Language-specific excludes
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+
+# Lock files (include in real projects, exclude from demo)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Demo-specific exclusions
+*.draft.md
+*.wip.md
+scratch/
+experimental/

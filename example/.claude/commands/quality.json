@@ -1,0 +1,36 @@
+{
+  "name": "quality",
+  "description": "Run all code quality checks (lint, format, audit)",
+  "command": "npm run lint && npm run format && npm audit --audit-level moderate",
+  "when_to_use": "Before commits, during code review, or when ensuring code quality",
+  "prerequisites": [
+    "npm install completed",
+    "ESLint and Prettier configured"
+  ],
+  "expected_output": "No linting errors, proper formatting, no security vulnerabilities",
+  "component_commands": {
+    "lint": "npm run lint -- Check for code quality issues",
+    "lint:fix": "npm run lint:fix -- Auto-fix linting issues",
+    "format": "npm run format -- Check code formatting",
+    "format:fix": "npm run format:fix -- Auto-fix formatting issues",
+    "audit": "npm audit -- Check for security vulnerabilities"
+  },
+  "common_issues": {
+    "linting_errors": {
+      "description": "ESLint finds code quality issues",
+      "solution": "Run 'npm run lint:fix' to auto-fix, then review remaining issues",
+      "manual_fixes": "Unused variables, missing prop types, console.log statements"
+    },
+    "formatting_issues": {
+      "description": "Prettier finds formatting inconsistencies",
+      "solution": "Run 'npm run format:fix' to auto-format all files",
+      "prevention": "Configure IDE to format on save"
+    },
+    "security_vulnerabilities": {
+      "description": "npm audit finds package vulnerabilities",
+      "solution": "Run 'npm audit fix' or update specific packages",
+      "escalation": "For high/critical issues, update CLAUDE.md and notify team"
+    }
+  },
+  "integration_with_workflow": "Should be run as part of pre-commit hooks and CI/CD pipeline"
+}

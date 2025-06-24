@@ -1,0 +1,27 @@
+{
+  "name": "test",
+  "description": "Run complete test suite with coverage",
+  "command": "npm run test:full",
+  "when_to_use": "Before committing changes or when validating all functionality",
+  "prerequisites": [
+    "All dependencies installed",
+    "No syntax errors in code"
+  ],
+  "expected_output": "Frontend and backend tests pass with >80% coverage",
+  "related_commands": {
+    "test:watch": "Run tests in watch mode during development",
+    "test:coverage": "Run tests with detailed coverage report",
+    "test:backend": "Run only backend tests"
+  },
+  "success_criteria": [
+    "All tests pass (0 failures)",
+    "Coverage thresholds met (>80%)",
+    "No test timeouts or hangs"
+  ],
+  "failure_actions": [
+    "Review failed test output",
+    "Check for syntax errors in test files",
+    "Verify mock implementations are correct",
+    "Update memory/project_context.md with any issues"
+  ]
+}

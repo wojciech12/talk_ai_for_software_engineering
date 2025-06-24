@@ -1,0 +1,16 @@
+{
+  "name": "dev",
+  "description": "Start development environment (frontend + backend)",
+  "command": "npm run dev",
+  "when_to_use": "Use when starting development work on the full-stack application",
+  "prerequisites": [
+    "npm install has been run",
+    "Port 3000 and 5000 are available"
+  ],
+  "expected_output": "Both React dev server and Node.js backend should start concurrently",
+  "troubleshooting": {
+    "port_in_use": "Kill processes on ports 3000/5000: lsof -ti:3000 | xargs kill",
+    "missing_dependencies": "Run: npm install",
+    "backend_fails": "Check backend/server.js for syntax errors"
+  }
+}
