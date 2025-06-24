@@ -26,6 +26,7 @@ Communities:
 Antropic - great to know:
 
 - modes (shift-tab) - plan, edit...
+- `PLAN.md`
 - Getting started:
   - https://docs.anthropic.com/en/docs/claude-code/memory
   - https://docs.anthropic.com/en/docs/claude-code/common-workflows
