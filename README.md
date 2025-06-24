@@ -38,6 +38,7 @@ Github Copilot:
 - You can link, e.g., your CLAUDE.md to your github copilot configs
 - ALWAYS use agentic mode
 - https://code.visualstudio.com/docs/copilot/copilot-customization
+- https://docs.github.com/en/copilot/using-github-copilot/ai-models/choosing-the-right-ai-model-for-your-task
 
 Cline (WIP):
 
@@ -69,6 +70,11 @@ Reducing Hallucinations:
 Security:
 
 - ignore file - every tool has its own, for example, `.claudeignore` for Claude Code
+
+## Developing your own AI product - WIP
+
+- TBA
+- https://www.anthropic.com/engineering/building-effective-agents
 
 ## Parking lot
 
